@@ -1,0 +1,53 @@
+.debug {
+  background-color: #ccc;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+body > p {
+  border-radius: 1em;
+  background-color: #444;
+  padding: 0.75em;
+  color: white;
+}
+.debug,
+.question {
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+.answer {
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+  background-color: #00b15a;
+}
+
+.question {
+  background-color: #fd9520;
+}
+
+a {
+  color: white;
+}
+
+.answer > a:after {
+  content: '\2605';
+  width: 3em;
+  text-align: center;
+  display: inline-block;
+}
+
+a:last-child:after {
+  display: none;
+}
+
+/* pour animer avec JS */
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.8s;
+}

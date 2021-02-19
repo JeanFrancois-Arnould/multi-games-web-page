@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+
+<main>
+  <h3>Identification</h3>
+  <% if(locals.error) {%>
+  <p class="error-message">Désolé cet identifiant / mot de passe ou l'utilisateur n'existe pas </p>
+  <% } %>
+  <form method="post">
+    <label for="user-name">Nom d'utilisateur</label>
+    <input type="text" name="username" id="user-name" placeholder="ex: root">
+    <label for="password">Mot de passe</label>
+    <input type="password" name="password" id="password" placeholder="ex: admin123">
+    <button type="submit">Connexion</button>
+  </form>
+</main>
+
+<%- include('partials/footer') %>

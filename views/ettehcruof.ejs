@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+
+<% console.log(locals) %>
+<% if(locals.won) {%>
+  <p class="question">
+    Héhé, trop facile. Tu veux rejouer ?
+  </p>
+  <p class="answer">
+    <a href="/game/ettehcruof">Rejouer</a>
+  </p>
+<% } else {%>
+<p class="question"><%= locals.message %></p>
+
+  <p class="answer">
+    <a href="/game/ettehcruof?answer=moins">Moins</a>
+    <a href="/game/ettehcruof?answer=plus">Plus</a>
+    <a href="/game/ettehcruof?answer=win">Trouvé</a>
+  </p>
+<% } %>
+<%- include('partials/footer') %>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge RPG</title>
+  <% if(locals.cssFile) {%>
+    <link rel="stylesheet" href="/css/<%= locals.cssFile %>">
+  <% } %>
+
+</head>
+ <header>
+    <h1>
+      <a href="/">GameHub</a>
+    </h1>
+  </header>
+<body>
+<div class="compteur">0</div>
+<p>move</p>
+  <ul>
+    <li>turndown: v</li>
+    <li>turnUp: t</li>
+    <li>turnRight: h</li>
+    <li>turnBack: f</li>
+    <li>moveForward: j</li>
+    <li>moveBack: d</li>
+  </ul>
+<button class="replay" >rejouer</button>
+
+
+  <div id="board">
+  
+  </div>
+
+  
+  <% if(locals.jsFile) {%>
+  <script src="/js/<%= locals.jsFile %>" ></script>
+<% } %>
+</body>
+</html>
