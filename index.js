@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const ettehcruof = require('./my_modules/ettehcruof');
 const port = 5050;
 
@@ -12,7 +11,7 @@ app.set('view engine', 'ejs');
 // toutes les reqûetes. Et si une requête a la méthode "post"
 // ce middelware ira chercher le contenu de ce qu a été posté
 // et le rendra disponible dans req.body (qui n'existait pas avant)
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 
 // Celui ci pour toutes les requêtes reçues va d'abord vérifier
@@ -77,10 +76,6 @@ app.post('/login', (req, res) => {
 app.get('/', (req, res, next) => {
   res.render('index');
   next();
-});
-
-app.get('/', (req, res) => {
-  console.log('Je suis bien appelé après le middleware précédent');
 });
 
 app.get('/game/ettehcruof', (req, res, next) => {

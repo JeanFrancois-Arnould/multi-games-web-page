@@ -11,9 +11,14 @@ a {
 
 /* True Styling */
 
-header {
+.home-page{
   background: rgb(88, 87, 87) center / cover no-repeat
     url(/images/boardgames.jpg);
+  height: 100vh;
+}
+
+header {
+  
   display: flex;
   flex-direction: column;
 }

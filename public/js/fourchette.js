@@ -3,18 +3,11 @@
 // 1. On peut définir la fourchette max
 var max = 500; 
 
-// 2. On génère un nombre aléatoire entre 0 et la fourchette max
-// on génère déjà un nombre décimal de 0 à 1
-// var randomBase = Math.random();
-// on le multiplie par le max pour transposer notre nombre de 0 à max
-// var randomNumber = randomBase * max;
-// on l'arrondit pour conserver un entier
-// var roundedRandomNumber = Math.round(randomNumber);
+
 var searchedNumber = Math.round(Math.random() * max);
 
-// var enteredNumber = Number(prompt('Quel est le nombre à trouver ?'));
 // 3. On demande à l'utilisateur d'essayer de trouver, on veille à bien récupérer un nombre
-var enteredNumber = parseInt(prompt('Quel est le nombre à trouver ?'));
+var enteredNumber = parseInt(prompt('choisir un nombre entre 0 et 500 ?'));
 
 // 4. On initialise un compteur pour compter les essais
 var attempt = 1;
